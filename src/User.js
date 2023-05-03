@@ -6,14 +6,14 @@ export default function User() {
 
     function changeUserName() {
         const newUserName = prompt('Qual será o nome novo?');
-        if (newUserName != null || myUserName != undefined || myUserName != "" || myUserName != " ") {
+        if (newUserName != null && newUserName != undefined && newUserName != "" && newUserName != " ") {
             setName(newUserName);
         }
     }
 
     function changeUserImage() {
         const newUserImage = prompt('URL de nova imagem');
-        if (newUserImage != null || newUserImage != undefined || newUserImage != "" || newUserImage != " ") {
+        if (newUserImage != null && newUserImage != undefined && newUserImage != "" && newUserImage != " ") {
             setImage(newUserImage);
         }
     }
