@@ -35,7 +35,7 @@ export default function Post(postObject) {
     let saved = isSaved ? "bookmark" : "bookmark-outline";
 
     return (
-        <div class="post">
+        <div data-test="post" class="post">
             <div class="topo">
                 <div class="usuario">
                     <img src={postObject.userImage} alt="" />
@@ -47,25 +47,25 @@ export default function Post(postObject) {
             </div>
 
             <div class="conteudo">
-                <img onDoubleClick={doubleClickLike} src={postObject.postImage} alt="" />
+                <img data-test="post-image" onDoubleClick={doubleClickLike} src={postObject.postImage} alt="" />
                 {heartAnimation && <div className="heart"><img src="./assets/img/heart.png" /></div>}
             </div>
 
             <div class="fundo">
                 <div class="acoes">
                     <div>
-                        <ion-icon class={heartClass} onClick={like} name={heartName}></ion-icon>
+                        <ion-icon data-test="like-post" class={heartClass} onClick={like} name={heartName}></ion-icon>
                         <ion-icon name="chatbubble-outline"></ion-icon>
                         <ion-icon name="paper-plane-outline"></ion-icon>
                     </div>
                     <div>
-                        <ion-icon onClick={save} name={saved}></ion-icon>
+                        <ion-icon data-test="save-post" onClick={save} name={saved}></ion-icon>
                     </div>
                 </div>
 
                 <div class="curtidas">
                     <img src={postObject.firstLikeImage} alt="" />
-                    <div class="texto">
+                    <div data-test="likes-number" class="texto">
                         Curtido por <strong>{postObject.firstLikeName}</strong> e <strong>outras {totalLikesAmount}</strong>
                     </div>
                 </div>
