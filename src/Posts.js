@@ -15,7 +15,7 @@ const AllPosts = [
         postImage: "assets/img/dog.svg",
         firstLikeImage: "assets/img/adorable_animals.svg",
         firstLikeName: "adorable_animals",
-        likesAmount: 99.159
+        likesAmount: 124.159
     },
     {
         userImage: "assets/img/meowed.svg",
