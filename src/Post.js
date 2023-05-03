@@ -11,6 +11,11 @@ export default function Post(postObject) {
     }
 
     function doubleClickLike() {
+        if(isLiked)
+        {
+            return;
+        }
+
         setLiked(true);
         setHeartAnimation(true);
         setTimeout(() => setHeartAnimation(false), 500);
